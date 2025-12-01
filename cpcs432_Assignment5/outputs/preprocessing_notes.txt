@@ -1,0 +1,60 @@
+Arabic Text Preprocessing & Feature Extraction
+Phase 3 - CPCS432 Assignment 5
+Integrated with Phase 2 Data Loading
+======================================================================
+
+PHASE 2 INTEGRATION:
+----------------------------------------------------------------------
+Data loaded using Phase 2 utilities (utils.load_dataset())
+Original documents: 2239
+Categories: Economy, Sports
+
+PREPROCESSING STEPS:
+----------------------------------------------------------------------
+1. Text Normalization (unify Alef, remove diacritics, normalize Taa Marbuta and Yaa)
+2. Remove punctuation and non-Arabic symbols
+3. Tokenize text into words
+4. Remove stopwords (using 346 Arabic stopwords)
+5. Apply light stemming (remove common prefixes and suffixes)
+6. Filter tokens (remove very short tokens)
+
+
+THEORETICAL JUSTIFICATION:
+----------------------------------------------------------------------
+NORMALIZATION: Unifying character variations reduces vocabulary size and improves matching (NLP1 concept)
+
+STOPWORD_REMOVAL: Removes high-frequency, low-information words to focus on meaningful content (NLP1)
+
+STEMMING: Reduces inflected words to root form, improving recall in IR tasks (NLP1)
+
+TFIDF: Balances term frequency with document frequency to identify important terms (NLP3/IR concept)
+
+
+STATISTICS:
+----------------------------------------------------------------------
+Total documents: 2239
+Vocabulary size: 32133
+Categories: Economy, Sports
+
+Documents per category:
+  - Economy: 859
+  - Sports: 1380
+
+
+SAMPLE: Top 15 TF-IDF terms from first document:
+----------------------------------------------------------------------
+1. اقتصاد: 0.0795
+2. اقتصادي: 0.0762
+3. موحد: 0.0615
+4. حرك: 0.0483
+5. تكامل: 0.0475
+6. جمعي: 0.0447
+7. خليج: 0.0363
+8. مؤتمر: 0.0351
+9. حري: 0.0322
+10. خليجي: 0.0303
+11. تركز: 0.0279
+12. لجمعي: 0.0262
+13. تنافس: 0.0254
+14. اتجا: 0.0245
+15. خلق: 0.0244

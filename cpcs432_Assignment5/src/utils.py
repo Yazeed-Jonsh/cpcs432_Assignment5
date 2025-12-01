@@ -26,7 +26,24 @@ def read_file_text(file_path: str, encoding: str = "utf-8") -> str:
     """
     Read the full content of a file and return it as a single string.
     No cleaning or preprocessing is applied here.
+    Tries multiple encodings for Arabic text files.
     """
+    # Try multiple encodings for Arabic files
+    encodings = [encoding, 'utf-8', 'windows-1256', 'iso-8859-6', 'cp1256', 'latin-1']
+    
+    for enc in encodings:
+        try:
+            with open(file_path, "r", encoding=enc) as f:
+                text = f.read()
+            # Check if we got valid text (not just replacement characters)
+            if text and not all(c == '�' or c == '\ufffd' for c in text[:100]):
+                return text
+        except (UnicodeDecodeError, UnicodeError, LookupError):
+            continue
+        except Exception:
+            continue
+    
+    # Fallback: use original encoding with error handling
     with open(file_path, "r", encoding=encoding, errors="ignore") as f:
         text = f.read()
     return text

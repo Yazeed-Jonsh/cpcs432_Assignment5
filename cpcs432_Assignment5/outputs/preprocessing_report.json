@@ -1,0 +1,90 @@
+{
+  "project": "CPCS432 - Phase 3 (Integrated with Phase 2)",
+  "phase2_integration": {
+    "data_source": "Phase 2 load_dataset() from utils.py",
+    "dataframe_columns": [
+      "filename",
+      "text",
+      "label"
+    ],
+    "original_document_count": 2239
+  },
+  "preprocessing_steps": [
+    "1. Text Normalization (unify Alef, remove diacritics, normalize Taa Marbuta and Yaa)",
+    "2. Remove punctuation and non-Arabic symbols",
+    "3. Tokenize text into words",
+    "4. Remove stopwords (using 346 Arabic stopwords)",
+    "5. Apply light stemming (remove common prefixes and suffixes)",
+    "6. Filter tokens (remove very short tokens)"
+  ],
+  "theoretical_justification": {
+    "normalization": "Unifying character variations reduces vocabulary size and improves matching (NLP1 concept)",
+    "stopword_removal": "Removes high-frequency, low-information words to focus on meaningful content (NLP1)",
+    "stemming": "Reduces inflected words to root form, improving recall in IR tasks (NLP1)",
+    "tfidf": "Balances term frequency with document frequency to identify important terms (NLP3/IR concept)"
+  },
+  "statistics": {
+    "total_documents": 2239,
+    "vocabulary_size": 32133,
+    "categories": [
+      "Economy",
+      "Sports"
+    ],
+    "documents_per_category": {
+      "Economy": 859,
+      "Sports": 1380
+    }
+  },
+  "sample_vocabulary": [
+    "ءز",
+    "ءسئدج",
+    "ءن",
+    "ءهض",
+    "ؤاد",
+    "ؤجيء",
+    "ؤره",
+    "ؤلؤ",
+    "ؤوس",
+    "ئات",
+    "ئتخاذ",
+    "ئته",
+    "ئتها",
+    "ئتهما",
+    "ئتي",
+    "ئجمال",
+    "ئح",
+    "ئصدار",
+    "ئعداد",
+    "ئلي",
+    "ئه",
+    "ئوس",
+    "ئيبا",
+    "ئيس",
+    "اءز",
+    "اءطء",
+    "اؤد",
+    "اؤزولد",
+    "اؤكد",
+    "اؤلمبي",
+    "اؤم",
+    "اؤيد",
+    "ائتلاف",
+    "ائتم",
+    "ائتمان",
+    "ائتماني",
+    "ائتونا",
+    "ائح",
+    "ائحت",
+    "ائحتنا",
+    "ائد",
+    "ائدت",
+    "ائر",
+    "ائز",
+    "ائزا",
+    "ائس",
+    "ائسا",
+    "ائض",
+    "ائضا",
+    "ائعي"
+  ]
+}
