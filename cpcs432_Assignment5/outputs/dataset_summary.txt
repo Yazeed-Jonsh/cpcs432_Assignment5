@@ -1,0 +1,20 @@
+==== DATASET SUMMARY ====
+
+Number of Economy documents: 859
+Number of Sports documents : 1380
+Total documents            : 2239
+
+==== SAMPLE ROWS ====
+
+filename: arc_Articlesww0221.html
+label   : Economy
+text    :                                                                                                                                                       ...
+
+filename: arc_Articlesww0313.html
+label   : Economy
+text    :                                                                                                                                                       ...
+
+filename: arc_Articlesww0521.html
+label   : Economy
+text    :                                                                                                                                                       ...
+
