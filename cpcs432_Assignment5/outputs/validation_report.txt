@@ -1,0 +1,17 @@
+Phase 4 Validation Report
+=========================
+Accuracy: 0.9933
+
+Misclassified Examples:
+File: arc_Articleszze328.html
+  True: Economy -> Pred: Sports
+  Snippet:   الإصلاح الإداري والخطوات العملية  في مسيرة التقدم والتطوير في البلاد    يمكن تأكيد أن معظم الأفكار...
+
+File: arc_Articlesyy4fbc.html
+  True: Economy -> Pred: Sports
+  Snippet:    اللجنة التحضيرية تدعو إلى المساهمة  في تأسيس جمعية لمعاهد التدريب   خلال اجتماع يعتبر الأول للجنة...
+
+File: arc_Articleswwf024.html
+  True: Economy -> Pred: Sports
+  Snippet:  يعنى بمكافحة غسل الأموال وتمويل الإرهاب  البحرين تستضيف الإجتماع الوزاري لمجموعة العمل المالي      ...
+
